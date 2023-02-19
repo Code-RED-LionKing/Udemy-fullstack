@@ -32,9 +32,9 @@ alert(onlineCourse.goals);
 alert(onlineCourse.goals[1]);
 
 
-//5) Add a custom comand that does the following
+//5) Add a custom command that does the following
 
-function getListItem(arry, arryIndex) {
+function getListItem(array, arryIndex) {
     let arrayElement = array[arrayIndex];
     return arrayElement;
 }

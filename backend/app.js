@@ -1,12 +1,4 @@
 let age = 32;
-let greetingText = 'Hi I\'m Max!!!!'; /*'' 사이 ' 백슬래시로 표현*/
-alert(greetingText);
-alert(greetingText);
-greetingText = "Hi, I am a really Max!";
-alert(greetingText);
-alert(age);
-alert(age);
-
 let number = 31;
 let userName = " max";
 let hobbies = ["sports", "Cooking", "Reading"];
@@ -29,7 +21,6 @@ let job2 = {
 alert(job1.title);
 
 let totalAdultYears;
-let userAge = 18
 
 function calculateAdultYears(userAge) {
     let result;
@@ -37,12 +28,23 @@ function calculateAdultYears(userAge) {
     return result
 }
 
-calculateAdultYears();
-alert(totalAdultYears);
+totalAdultYears = calculateAdultYears(age);
+console.log(totalAdultYears);
 
 age =45
-totalAdultYearts = calculateAdultYears('Hi There');
-alert(totalAdultYears);
+totalAdultYears = calculateAdultYears(age);
+console.log(totalAdultYears);
+
+//Method
+
+let person = {
+    name : 'Max', //Property
+    greet() { //Method
+        console.log('Hello!');
+    }
+};
+
+person.greet();
 
 
 
