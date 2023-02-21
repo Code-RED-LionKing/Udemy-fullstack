@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Open-Sans', sans-serif;
+    color : rgb(44,41,44);
+    background-color: rgb(247,239,247);
+}
+
+#main-header {
+    background-color: rgb(140,0,255);
+    color: white;
+    padding: 2rem 5%;
+    text-align :center;
+    
+}
+
+#playername {
+    font-weight: bold;
+}
+
+
+.btn {
+    font : inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(140,0,255);
+    border: 1px solid lightgrey;
+    color : black;
+    cursor: pointer;
+}
+
+.btn-alt {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(140,0,255);
+}
+
+.btn-alt2 {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(140,0,255);
+}
+
+.btn:hover{
+    background-color: rgb(168, 121, 245);
+    border-color: rgb(143, 81, 241);
+}
+.btn-alt:hover {
+    background-color: lightgreen;
+    border-color:aliceblue;
+}
+
+.btn-alt2:hover {
+    background-color: red;
+    border-color:lightgrey;
+
+}
