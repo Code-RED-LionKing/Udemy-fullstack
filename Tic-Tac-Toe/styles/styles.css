@@ -25,6 +25,7 @@ body {
     border: 1px solid lightgrey;
     color : black;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .btn-alt {
