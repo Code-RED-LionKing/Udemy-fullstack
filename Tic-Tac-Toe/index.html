@@ -34,31 +34,31 @@
             <form>
                 <div class="form-control">
                     <label for = "playername">Player name</label>
-                    <br />
-                    <input type ="text" name="playername" id = "playername" />
+                    <input type ="text" name="playername" required id = "playername" />
                 </div>
+                <p id="config-error"></p>
                 <div>
-                    <button type = "button" class ="btn btn-alt" id = "cancel-config-btn">Cancel</button>
-                    <button type = "submit"  class= "btn btn-alt" id = "confirm-config-btn">Confirm </button>
+                    <button type = "reset" class ="btn btn-alt" id = "cancel-config-btn">Cancel</button>
+                    <button type = "submit"  class= "btn" id = "confirm-config-btn">Confirm</button>
                 </div>
             </form>
         </aside>
         <section id="game-configuration">
             <ol>
                 <li>
-                    <article>
+                    <article id="player-1-data">
                         <h2>Player 1 </h2>
                         <h3>PLAYER NAME</h3>
                         <p class = "player-symbol">X</p>
-                        <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
+                        <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">Edit</button>
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article id ="player-2-data" >
                         <h2>Player 2 </h2>
                         <h3>PLAYER NAME</h3>
                         <p class = "player-symbol">O</p>
-                        <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
+                        <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">Edit</button>
                     </article>
 
                 </li>
