@@ -9,6 +9,9 @@ function closePlayerConfig() {
 
     openPlayerConfigOverlayElement.style.display='none';
     backdropElement.style.display='none';
+    formElement.firstElementChild.classList.remove('error');
+    errorOutputElement.textContent = '';
+    formElement.firstElementChild.lastElementChild.value = ''; //prectise DOM Structure // Confirm 클릭하지않고 backdrop 할때 입력된 playername 지워줌
 
 }
 
@@ -37,5 +40,6 @@ function savePlayerConfig(event) {
     } else {
         players[1].name = enteredPlayername;
     } same working code*/ 
-    closePlayerConfig();
+
+    closePlayerConfig(); //.modal closing
 }
