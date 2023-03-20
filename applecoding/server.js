@@ -6,15 +6,15 @@ const MongoClient = require('mongodb').MongoClient;
 app.set('view engine', 'ejs'); //ejs 설치후 입력.
 
 var db;
-MongoClient.connect('mongodb+srv://admin:q1w2e3@cluster0.yujhzoq.mongodb.net/node_js?retryWrites=true&w=majority',{ useUnifiedTopology: true },function(error, client){//DB접속 완료되면
+MongoClient.connect('mongodb+srv://admin:qwe123@cluster0.yujhzoq.mongodb.net/?retryWrites=true&w=majority',{ useUnifiedTopology: true },function(error, client){//DB접속 완료되면
 
     if(error) return console.log(error)
     db = client.db('node_js');
     console.log('연결완료');
 
-    db.collection('post'). insertOne({이름 : 'John', 나이 : 20}, function(error, result){
-        console.log('저장완료');
-    });
+    // db.collection('post'). insertOne({이름 : 'John', 나이 : 20}, function(error, result){
+    //     console.log('저장완료');
+    // });
 
     app.listen(8080, function() {
 
@@ -68,4 +68,15 @@ app.get('/list', function(request, respond){ //db꺼내서 html로 보기
    });
 
    
+});
+
+app.delete('/delete', function(request,respond){ //delete 메소드를이용해 /delete 경로로 들어온 요청을(요청.body)에 담겨온 게시물 번호를 가진 글을 db에서 찾아 삭제해라.
+    console.log(request.body);
+    request.body._id = parseInt(request.body._id);//오브젝트 문법 문자형을 숫자로 변환.
+    db.collection('post').deleteOne(request.body, function(error, result){
+        console.log('삭제완료');
+        respond.send('삭제완료');
+    });
+    
+
 });
